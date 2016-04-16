@@ -1,0 +1,36 @@
+<template name="productsCreate">
+	<h3>Add Product</h3>
+	<form class="create">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" name="name" class="form-control" placeholder="Product name">
+		</div>
+		<div class="form-group">
+			<label for="name">Category</label>
+			<select name="category" class="form-control">
+				<option value="0"> -- Choose --</option>
+				{{#each categories}}
+					<option value="{{slug}}">{{name}}</option>
+				{{/each}}
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="name">Image</label>
+			<input type="file" name="productImage" id="productImage" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="name">Descritption</label>
+			<textarea name="description" class="form-control"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="name">Featured</label>
+			<input type="radio" name="isFeatured" value="1">Yes 
+			<input type="radio" name="isFeatured" value="0" checked>No
+		</div>
+
+		<div>
+			<input type="submit" class="btn btn-success" value="Add Product">
+			<a href="/" class="btn btn-default">Close</a>
+		</div>
+	</form>
+</template>

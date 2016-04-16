@@ -1,0 +1,23 @@
+<template name="productsReview">
+	<h3>Add A Review for <strong>{{name}}</strong></h3>
+	<form class="review">
+		<div class="form-group">
+			<label for="rating">Rating</label>
+			<select name="rating" class="form-control">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="review">Review</label>
+			<textarea name="body" cols="30" rows="5" class="form-control"></textarea>
+		</div>
+		<div>
+			<input type="submit" class="btn btn-success" value="Add Review">
+			<a href="/" class="btn btn-default">Close</a>
+		</div>
+	</form>
+</template>
